@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3D Room</title>
+  <style> body { margin: 0; } </style>
+</head>
+<body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script>
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+// 💡 Lighting
+const light = new THREE.AmbientLight(0xffffff, 0.8);
+scene.add(light);
+
+// Floor
+const floorGeo = new THREE.BoxGeometry(5, 0.1, 5);
+const floorMat = new THREE.MeshStandardMaterial({ color: "brown" });
+const floor = new THREE.Mesh(floorGeo, floorMat);
+scene.add(floor);
+
+// Walls
+const wallMat = new THREE.MeshStandardMaterial({ color: "white" });
+
+const wall1 = new THREE.Mesh(new THREE.BoxGeometry(5,2,0.1), wallMat);
+wall1.position.z = -2.5;
+scene.add(wall1);
+
+const wall2 = new THREE.Mesh(new THREE.BoxGeometry(0.1,2,5), wallMat);
+wall2.position.x = -2.5;
+scene.add(wall2);
+
+// Camera
+camera.position.z = 7;
+camera.position.y = 3;
+camera.lookAt(0,0,0);
+
+// Render
+renderer.render(scene, camera);
+</script>
+
+</body>
+</html>

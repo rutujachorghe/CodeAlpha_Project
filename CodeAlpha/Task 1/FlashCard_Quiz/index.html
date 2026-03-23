@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="container">
+
+<h1>Flashcard Quiz</h1>
+
+<div class="flashcard">
+    <h2 id="question">Question</h2>
+    <p id="answer" class="hidden">Answer</p>
+
+    <button onclick="showAnswer()">Show Answer</button>
+</div>
+
+<div class="navigation">
+    <button onclick="prevCard()">Previous</button>
+    <button onclick="nextCard()">Next</button>
+</div>
+
+<hr>
+
+<h3>Add / Edit Flashcard</h3>
+
+<input type="text" id="newQuestion" placeholder="Enter Question">
+<input type="text" id="newAnswer" placeholder="Enter Answer">
+
+<div class="actions">
+<button onclick="addCard()">Add</button>
+<button onclick="editCard()">Edit</button>
+<button onclick="deleteCard()">Delete</button>
+</div>
+
+</div>
+
+
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

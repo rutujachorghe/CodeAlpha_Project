@@ -1,0 +1,50 @@
+ body {
+        font-family: Arial;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .house {
+        width: 600px;
+        height: 400px;
+        border: 5px solid black;
+        position: relative;
+    }
+    .room {
+        border: 2px solid black;
+        position: absolute;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: bold;
+    }
+    /* Rooms */
+    .bedroom1 {
+        width: 200px;
+        height: 150px;
+        top: 0;
+        left: 0;
+    }
+    .bedroom2 {
+        width: 200px;
+        height: 150px;
+        top: 0;
+        right: 0;
+    }
+    .living {
+        width: 250px;
+        height: 150px;
+        bottom: 0;
+        left: 0;
+    }
+    .kitchen {
+        width: 150px;
+        height: 100px;
+        bottom: 0;
+        right: 0;
+    }
+    .bathroom {
+        width: 150px;
+        height: 100px;
+        bottom: 110px;
+        right: 0;
+    }
